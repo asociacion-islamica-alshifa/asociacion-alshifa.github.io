@@ -1,178 +1,127 @@
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Asociación Islámica Al-Shifa A.C.</title>
   <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #fffdf8;
-      color: #333;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      background-color: #1c5b4d;
-      color: white;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 30px;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-    header img {
-      height: 60px;
-    }
-    nav a {
-      color: white;
-      margin: 0 10px;
-      text-decoration: none;
-      font-weight: 500;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    .donate-button {
-      background-color: #f5e8d0;
-      color: #1c5b4d;
-      border: none;
-      padding: 10px 18px;
-      border-radius: 8px;
-      cursor: pointer;
-      font-weight: bold;
-      transition: all 0.3s ease;
-    }
-    .donate-button:hover {
-      background-color: #1c5b4d;
-      color: white;
-    }
-    .hero {
-      text-align: center;
-      padding: 80px 20px;
-      background-color: #e6edea;
-    }
-    .hero h1 {
-      font-size: 2.5em;
-      margin-bottom: 10px;
-      color: #1c5b4d;
-    }
-    .hero p {
-      font-size: 1.2em;
-      color: #555;
-    }
-    section {
-      padding: 40px 20px;
-      max-width: 900px;
-      margin: auto;
-    }
-    h2 {
-      color: #1c5b4d;
-      text-align: center;
-    }
-    .projects {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      gap: 20px;
-    }
-    .project {
-      background-color: white;
-      border-radius: 10px;
-      padding: 20px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      width: 260px;
-      text-align: center;
-    }
-    footer {
-      background-color: #1c5b4d;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-    }
-    .floating-donate {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #f5e8d0;
-      color: #1c5b4d;
-      padding: 15px 25px;
-      border-radius: 50px;
-      font-weight: bold;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-      text-decoration: none;
-      transition: 0.3s;
-    }
-    .floating-donate:hover {
-      background-color: #1c5b4d;
-      color: white;
-    }
+    body{font-family:Inter,Arial,Helvetica,sans-serif;margin:0;background:#F1F0EB;color:#123326}
+    header{position:sticky;top:0;background:#fff;padding:10px 20px;box-shadow:0 2px 8px rgba(0,0,0,0.05);z-index:50}
+    .wrap{max-width:1100px;margin:0 auto;padding:10px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand img{height:56px}
+    nav{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .menu{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+    .menu a{padding:8px 10px;border-radius:8px;color:#123326;text-decoration:none;font-weight:600}
+    .menu a:hover{background:rgba(94,133,111,0.08)}
+    .donate-fixed{position:fixed;right:18px;top:18px;background:#F5E8D0;padding:10px 14px;border-radius:30px;box-shadow:0 6px 18px rgba(0,0,0,0.08);cursor:pointer;z-index:100}
+    .hero{background:linear-gradient(90deg,#eff6f1,#fff);padding:40px;border-radius:12px;margin:20px 0}
+    h1{margin:0;color:#124432}
+    .section{background:#fff;padding:20px;border-radius:12px;margin:18px 0;box-shadow:0 6px 18px rgba(0,0,0,0.04)}
+    footer{background:#fff;padding:14px;border-radius:10px;text-align:center;margin:20px 0}
+    .contact-form input,.contact-form textarea{width:100%;padding:10px;margin:6px 0;border:1px solid #e6e6e6;border-radius:8px}
+    @media(max-width:700px){.menu{display:none}}
   </style>
 </head>
-
 <body>
+  <div class="donate-fixed" onclick="document.getElementById('donaciones').scrollIntoView({behavior:'smooth'})">Dona ahora</div>
   <header>
-    <div>
-      <img src="LOGO.png" alt="Logo Al-Shifa" />
+    <div class="wrap" style="display:flex;align-items:center;justify-content:space-between">
+      <div class="brand"><img src="LOGO.png" alt="Logo"><div style="margin-left:8px"><strong>Asociación Islámica Al-Shifa A.C.</strong><div style="font-size:12px;color:#6b6b6b">Educación y apoyo comunitario</div></div></div>
+      <nav>
+        <div class="menu">
+          <a href="#inicio">Inicio</a>
+          <a href="#quienes">Quiénes somos</a>
+          <a href="#que-hacemos">Qué hacemos</a>
+          <a href="#actividades">Actividades</a>
+          <a href="#cursos">Cursos</a>
+          <a href="#biblioteca">Biblioteca</a>
+          <a href="#calendario">Calendario</a>
+          <a href="#blog">Blog</a>
+          <a href="#donaciones">Donaciones</a>
+          <a href="#transparencia">Transparencia</a>
+          <a href="#proyectos">Proyectos</a>
+          <a href="#voluntariado">Voluntariado</a>
+          <a href="#servicio-social">Servicio social</a>
+          <a href="#contacto">Contacto</a>
+        </div>
+      </nav>
     </div>
-    <nav>
-      <a href="#inicio">Inicio</a>
-      <a href="#actividades">Actividades</a>
-      <a href="#cursos">Cursos</a>
-      <a href="#calendario">Calendario</a>
-      <a href="#biblioteca">Biblioteca</a>
-      <a href="#quienes-somos">Quiénes somos</a>
-      <a href="#donaciones">Donaciones</a>
-    </nav>
-    <button class="donate-button" onclick="document.querySelector('#donaciones').scrollIntoView({behavior:'smooth'})">Dona ahora</button>
   </header>
 
-  <div class="hero" id="inicio">
-    <h1>Asociación Islámica Al-Shifa A.C.</h1>
-    <p>Promoviendo el bienestar, la educación y la solidaridad en nuestra comunidad.</p>
-  </div>
+  <main class="wrap" id="inicio">
+    <section class="hero">
+      <h1>Asociación Islámica Al-Shifa A.C.</h1>
+      <p>Ayudando con el corazón — educación y apoyo comunitario.</p>
+    </section>
 
-  <section id="donaciones">
-    <h2>Tu ayuda transforma vidas</h2>
-    <p style="text-align:center; max-width:700px; margin:auto;">
-      Cada contribución fortalece proyectos educativos, de bienestar y apoyo social que mejoran la vida de personas y familias que más lo necesitan.
-    </p>
-    <div class="projects">
-      <div class="project">
-        <h3>Educación y capacitación</h3>
-        <p>Apoyamos la formación humana y profesional a través de talleres, cursos y actividades que promueven el aprendizaje y la convivencia positiva.</p>
-      </div>
-      <div class="project">
-        <h3>Bienestar comunitario</h3>
-        <p>Tu ayuda permite llevar alimentos, ropa y acompañamiento a familias en situación vulnerable, impulsando salud y dignidad.</p>
-      </div>
-      <div class="project">
-        <h3>Cultura y valores humanos</h3>
-        <p>Fomentamos la solidaridad y la colaboración mediante proyectos culturales y sociales que unen a las personas.</p>
-      </div>
-    </div>
-  </section>
+    <section id="donaciones" class="section">
+      <h2>Tu ayuda transforma vidas</h2>
+      <p>Cada contribución fortalece proyectos educativos, de bienestar y apoyo social que mejoran la vida de personas y familias que más lo necesitan.</p>
+      <h3>Formas de donar</h3>
+      <p><strong>Donar con tarjeta o PayPal:</strong>
+      <a id="paypalBtn" href="#" target="_blank">Donar con PayPal / Tarjeta</a></p>
+      <p><strong>Depósito o transferencia:</strong><br>Banco: [Nombre del banco] - Cuenta: [Número] - CLABE: [CLABE] - Titular: Asociación Islámica Al-Shifa A.C.</p>
+      <p>Al completar la donación, por favor envía un comprobante a: <strong>asociacion.islamica.al.shifa@gmail.com</strong></p>
+    </section>
 
-  <section>
-    <h2>Formas de donar</h2>
-    <p><strong>💳 Donar con tarjeta o PayPal:</strong> próximamente disponible.</p>
-    <p><strong>🏦 Depósito o transferencia:</strong><br>
-      Banco: [Nombre del banco]<br>
-      Cuenta: [Número de cuenta]<br>
-      CLABE: [CLABE interbancaria]<br>
-      Titular: Asociación Islámica Al-Shifa A.C.<br>
-      Correo: asociacion.islamica.al.shifa@gmail.com
-    </p>
-    <p><strong>🎁 Apoyo en especie:</strong> contáctanos para coordinar la entrega de ropa, alimentos o libros.</p>
-  </section>
+    <section id="contacto" class="section">
+      <h2>Contacto</h2>
+      <form id="contactForm" class="contact-form">
+        <input id="name" placeholder="Nombre" required>
+        <input id="email" type="email" placeholder="Correo electrónico" required>
+        <input id="subject" placeholder="Asunto">
+        <textarea id="message" placeholder="Mensaje" required></textarea>
+        <div style="text-align:right"><button type="submit">Enviar mensaje</button></div>
+      </form>
+    </section>
 
-  <footer>
-    <p>© 2025 Asociación Islámica Al-Shifa A.C. — Tu ayuda transforma vidas.</p>
-  </footer>
+    <section id="transparencia" class="section">
+      <h2>Transparencia</h2>
+      <p>Próximamente publicaremos informes, balances y reportes de impacto para que puedas ver cómo se usan las donaciones.</p>
+    </section>
 
-  <a href="#donaciones" class="floating-donate">Dona ahora 💚</a>
+    <section id="proyectos" class="section">
+      <h2>Proyectos</h2>
+      <p>Proyecto: Huerto comunitario, Biblioteca móvil, entre otros.</p>
+    </section>
+
+    <section id="voluntariado" class="section">
+      <h2>Voluntariado</h2>
+      <p>Súmate como voluntario en actividades y entregas. Contáctanos.</p>
+    </section>
+
+    <section id="servicio-social" class="section">
+      <h2>Servicio social</h2>
+      <p>Ofrecemos espacios para prácticas y servicio social en proyectos comunitarios.</p>
+    </section>
+
+    <footer>
+      <p>© 2025 Asociación Islámica Al-Shifa A.C. — Tu ayuda transforma vidas.</p>
+      <p>Correo: asociacion.islamica.al.shifa@gmail.com</p>
+    </footer>
+  </main>
+
+  <script>
+    // PayPal placeholder: replace with your PayPal business email when ready
+    const paypalEmail = encodeURIComponent('tu-email-paypal@example.com');
+    document.getElementById('paypalBtn').href = 'https://www.paypal.com/donate?business=' + paypalEmail + '&currency_code=USD';
+
+    // Contact form: open mail client with pre-filled email to asociacion.islamica.al.shifa@gmail.com
+    document.getElementById('contactForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const subject = document.getElementById('subject').value.trim() || 'Contacto sitio web';
+      const message = document.getElementById('message').value.trim();
+      const mailto = 'mailto:asociacion.islamica.al.shifa@gmail.com'
+                   + '?subject=' + encodeURIComponent(subject + ' - ' + name)
+                   + '&body=' + encodeURIComponent(message + '\n\nContacto: ' + email);
+      window.location.href = mailto;
+      alert('Mensaje preparado para enviar. Se abrirá tu cliente de correo.');
+      this.reset();
+    });
+  </script>
 </body>
 </html>
